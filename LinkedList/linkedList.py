@@ -1,5 +1,4 @@
 # Node class
-from typing import Counter
 
 
 class Node:
@@ -93,19 +92,29 @@ class LinkedList:
             current = current.next
         return False
 
-    #get nth node in a list
-    def getNth(self,index):
+    # get nth node in a list
+    def getNth(self, index):
         current = self.head
         count = 0
 
         while current:
             if count == index:
                 return current.data
-            count  += 1
+            count += 1
             current = current.next
         assert(False)
         return 0
 
+    #function to reverse the linked list
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
 
     # get length of list
     def length(self):
@@ -119,7 +128,7 @@ class LinkedList:
     def printList(self):
         temp = self.head
         while temp:
-            print(temp.data)
+            print(temp.data,end=' ')
             temp = temp.next
 
 
@@ -137,13 +146,22 @@ if __name__ == '__main__':
     li.insertAfter(li.head.next, 8)
     print('created list is')
     li.printList()
-    print('length of list is:', li.length())
-    if li.search(21):
-        print('yes')
-    else:
-        print('no')
 
-    print('element at index 4 is ', li.getNth(4))
+    ######
+    # print('length of list is:', li.length())
+    # if li.search(21):
+    #     print('yes')
+    # else:
+    #     print('no')
+
+    # print('element at index 4 is ', li.getNth(4))
+
+    #######
+
+    print('reversed list')
+    li.reverse()
+    li.printList()
+
 
     # li.deleteList()
     # print('list is deleted')
