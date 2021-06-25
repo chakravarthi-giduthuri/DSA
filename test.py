@@ -30,18 +30,27 @@
 # # print(li.head.nxt.data)
 
 
-class Node:
-    def __init__(self,data):
-        self.data = data
-        self.next = None
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
 
-class linkedList:
-    def __init__(self):
-        self.head = None
+# class linkedList:
+#     def __init__(self):
+#         self.head = None
 
 
+# if __name__=='__main__':
+#     li = linkedList()
+#     li.head = Node(1)
 
-if __name__=='__main__':
-    li = linkedList()
-    li.head = Node(1)
-    
+# print(2%5)
+
+
+ar = [-1, -1, 6, 1, 9, 3, 2, -1, 4, -1]
+
+for i in range(len(ar)):
+    for j in range(len(ar)):
+        if ar[j] == i:
+            ar[j],ar[i]=ar[i],ar[j]
+print(ar)

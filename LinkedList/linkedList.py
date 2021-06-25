@@ -119,7 +119,7 @@ class LinkedList:
     # get length of list
     def length(self):
         temp = self.head
-        count = 0
+        count = 0     
         while temp:
             count += 1
             temp = temp.next
