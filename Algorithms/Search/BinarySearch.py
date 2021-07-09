@@ -33,7 +33,7 @@
 def binarySearch(arr,l,r,x):
     while l<=r:
         
-        mid = l +(r-l)//2
+        mid = l +(r-1)//2
 
         if arr[mid] == x:
             return mid
