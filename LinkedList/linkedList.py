@@ -36,11 +36,11 @@ class LinkedList:
             self.head = new_node
             return
 
-        last = self.head
-        while last.next:
-            last = last.next
+        current = self.head
+        while current.next:
+            current = current.next
 
-        last.next = new_node
+        current.next = new_node
 
     # delete node
     def delete(self, key):
