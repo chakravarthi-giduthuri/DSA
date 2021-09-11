@@ -9,7 +9,6 @@
 #             return binarySearch(arr, l, mid-1, x)
 #         else:
 #             return binarySearch(arr, mid+1, r, x)
-
 #     else:
 #         return -1
 
