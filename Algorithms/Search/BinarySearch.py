@@ -32,7 +32,7 @@
 def binarySearch(arr,l,r,x):
     while l<=r:
         
-        mid = l +(r-1)//2
+        mid = l +(r-l)//2
 
         if arr[mid] == x:
             return mid
@@ -45,8 +45,8 @@ def binarySearch(arr,l,r,x):
 
 
 arr = [2,3,4,10,40]
-x = 10
-result = binarySearch(arr,0,len(arr)-1,x)
+x = 40
+result = binarySearch(arr,0,len(arr),x)
 if result != -1:
     print('element is present at index',result)
 else:

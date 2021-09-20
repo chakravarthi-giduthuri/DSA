@@ -27,7 +27,7 @@ def rearrange(arr, n):
         j += 1
 
     for i in range(n):
-        print(arr[i], end=',')
+        print(arr[i], end=' +')
 
 
 arr = a.array('i', [1, 2, 3, 4, 5, 6, 7])
